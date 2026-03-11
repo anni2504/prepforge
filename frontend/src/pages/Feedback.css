@@ -1,0 +1,50 @@
+.overall-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  margin-bottom: 28px;
+  display: flex; gap: 40px; align-items: center; flex-wrap: wrap;
+}
+.overall-left { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.big-score {
+  font-size: 4rem; font-weight: 800;
+  font-family: var(--font-mono); line-height: 1;
+  display: flex; align-items: baseline; gap: 4px;
+}
+.grade-badge {
+  display: inline-block; padding: 6px 14px; border-radius: 20px;
+  font-size: 0.9rem; font-weight: 700;
+}
+
+.overall-bars { flex: 1; min-width: 280px; display: flex; flex-direction: column; gap: 14px; }
+.mini-bar-row { display: flex; align-items: center; gap: 12px; }
+
+.feedback-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+}
+
+.feedback-section-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--sec-color);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: box-shadow 0.3s;
+}
+.feedback-section-card:hover {
+  box-shadow: 0 4px 32px rgba(0,0,0,0.3);
+}
+.fsc-header {
+  display: flex; align-items: flex-start; gap: 14px;
+}
+.fsc-header h3 { font-size: 1rem; font-weight: 800; margin-bottom: 2px; }
+.fsc-score {
+  margin-left: auto; font-size: 1.6rem; font-weight: 800;
+  font-family: var(--font-mono); line-height: 1;
+}
+
+@media (max-width: 900px) {
+  .feedback-grid { grid-template-columns: 1fr; }
+  .overall-card { flex-direction: column; }
+}
